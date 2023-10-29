@@ -13,6 +13,7 @@
 		8294FC502AED2A96001820DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294FC4E2AED2A96001820DB /* Main.storyboard */; };
 		8294FC522AED2A9A001820DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294FC512AED2A9A001820DB /* Assets.xcassets */; };
 		8294FC552AED2A9A001820DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294FC532AED2A9A001820DB /* LaunchScreen.storyboard */; };
+		82BEBF692AEE822600C12E1E /* tableMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEBF682AEE822600C12E1E /* tableMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8294FC512AED2A9A001820DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8294FC542AED2A9A001820DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8294FC562AED2A9A001820DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82BEBF682AEE822600C12E1E /* tableMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				8294FC482AED2A96001820DB /* AppDelegate.swift */,
 				8294FC4A2AED2A96001820DB /* SceneDelegate.swift */,
+				82BEBF682AEE822600C12E1E /* tableMain.swift */,
 				8294FC4C2AED2A96001820DB /* ViewController.swift */,
 				8294FC4E2AED2A96001820DB /* Main.storyboard */,
 				8294FC512AED2A9A001820DB /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 				8294FC4D2AED2A96001820DB /* ViewController.swift in Sources */,
 				8294FC492AED2A96001820DB /* AppDelegate.swift in Sources */,
 				8294FC4B2AED2A96001820DB /* SceneDelegate.swift in Sources */,
+				82BEBF692AEE822600C12E1E /* tableMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

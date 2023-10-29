@@ -2,15 +2,12 @@
 //  main.swift
 //  PhotoGallery
 //
-//  Created by avishek on 28/10/23.
+//  Created by avishek on 29/10/23.
 //
 
 import UIKit
 
-class main: UIViewController{
-    
-    
-    
+class main: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +15,7 @@ class main: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
+
     /*
     // MARK: - Navigation
 
