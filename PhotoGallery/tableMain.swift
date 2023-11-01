@@ -7,7 +7,7 @@
 
 import UIKit
 
-var cam = ["cam01", "cam02", "cam03", "cam04", "cam05", "cam06", "cam07"]
+var cam = ["cam01", "cam02", "cam03", "cam04", "cam05", "cam06", "cam07", "cam08"]
 
 //var camImg = [UIImage(named: "cam01"), UIImage(named: "cam02"), UIImage(named: "cam03")]
 
