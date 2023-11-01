@@ -7,14 +7,18 @@
 
 import UIKit
 
+var cam = ["cam01", "cam02", "cam03", "cam04", "cam05", "cam06", "cam07"]
+
+//var camImg = [UIImage(named: "cam01"), UIImage(named: "cam02"), UIImage(named: "cam03")]
+
+var myIndex = 0
+
 class tableMain: UIViewController {
     
     
     @IBOutlet weak var myTable: UITableView!
     
-    var cam = ["cam01", "cam02", "cam03", "cam04", "cam05", "cam06", "cam07"]
-    
-    var camImg = [UIImage(named: "cam01"), UIImage(named: "cam02"), UIImage(named: "cam03")]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +51,12 @@ extension tableMain:UITableViewDelegate, UITableViewDataSource {
         //cell.imageView?.image = camImg[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        myTable.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "toDisplay", sender: self)
     }
     
     

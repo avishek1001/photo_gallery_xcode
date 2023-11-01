@@ -14,6 +14,7 @@
 		8294FC522AED2A9A001820DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294FC512AED2A9A001820DB /* Assets.xcassets */; };
 		8294FC552AED2A9A001820DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294FC532AED2A9A001820DB /* LaunchScreen.storyboard */; };
 		82BEBF692AEE822600C12E1E /* tableMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BEBF682AEE822600C12E1E /* tableMain.swift */; };
+		82D30D012AF2A340005261E7 /* display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D30D002AF2A340005261E7 /* display.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8294FC542AED2A9A001820DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8294FC562AED2A9A001820DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82BEBF682AEE822600C12E1E /* tableMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableMain.swift; sourceTree = "<group>"; };
+		82D30D002AF2A340005261E7 /* display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = display.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8294FC512AED2A9A001820DB /* Assets.xcassets */,
 				8294FC532AED2A9A001820DB /* LaunchScreen.storyboard */,
 				8294FC562AED2A9A001820DB /* Info.plist */,
+				82D30D002AF2A340005261E7 /* display.swift */,
 			);
 			path = PhotoGallery;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8294FC4D2AED2A96001820DB /* ViewController.swift in Sources */,
+				82D30D012AF2A340005261E7 /* display.swift in Sources */,
 				8294FC492AED2A96001820DB /* AppDelegate.swift in Sources */,
 				8294FC4B2AED2A96001820DB /* SceneDelegate.swift in Sources */,
 				82BEBF692AEE822600C12E1E /* tableMain.swift in Sources */,

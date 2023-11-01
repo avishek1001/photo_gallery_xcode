@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS4-0e-WWH">
                                 <rect key="frame" x="138" y="234" width="138" height="51"/>
@@ -93,9 +93,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="O3a-Gd-EE5" kind="show" id="Ri0-gK-OZO"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -110,22 +107,23 @@
                     <navigationItem key="navigationItem" id="HHD-z0-b5E"/>
                     <connections>
                         <outlet property="myTable" destination="GOl-T2-LcT" id="AuY-Yr-ALh"/>
+                        <segue destination="O3a-Gd-EE5" kind="show" identifier="toDisplay" id="NDm-O0-Tqd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ4-Pk-1wU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408.6956521739132" y="103.53260869565219"/>
         </scene>
-        <!--View Controller-->
+        <!--Display-->
         <scene sceneID="y1w-JN-Kf1">
             <objects>
-                <viewController id="O3a-Gd-EE5" sceneMemberID="viewController">
+                <viewController id="O3a-Gd-EE5" customClass="display" customModule="PhotoGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b9b-cC-ayc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cam01" translatesAutoresizingMaskIntoConstraints="NO" id="iRq-ke-USw">
-                                <rect key="frame" x="20" y="20" width="374" height="563"/>
+                                <rect key="frame" x="20" y="58" width="374" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-df-gJm">
@@ -136,25 +134,51 @@
                                 <rect key="frame" x="232" y="638" width="162" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2441085741" green="0.61261735669999995" blue="1" alpha="0.73951914610000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Next &gt;&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextAction:" destination="O3a-Gd-EE5" eventType="touchUpInside" id="vRj-ig-GXL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA7-d5-FYz">
                                 <rect key="frame" x="20" y="637" width="162" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2441085741" green="0.61261735669999995" blue="1" alpha="0.73951914610000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="&lt;&lt; Prev">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevAction:" destination="O3a-Gd-EE5" eventType="touchUpInside" id="vVK-Mo-rxU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-0v-Pio">
+                                <rect key="frame" x="26" y="11" width="47" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2441085741" green="0.61261735669999995" blue="1" alpha="0.73951914610000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="HOME"/>
+                                <connections>
+                                    <segue destination="SAT-Mv-xtR" kind="show" id="s9B-Ct-gbF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="spZ-Lt-juZ"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="oPU-je-weT"/>
+                    <connections>
+                        <outlet property="img" destination="iRq-ke-USw" id="BD0-0X-bhg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8V-CL-Xmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2337.68115942029" y="103.53260869565219"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s9B-Ct-gbF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cam01" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
