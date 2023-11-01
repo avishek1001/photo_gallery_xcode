@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UITextFieldDelegate{
     
     
 
@@ -15,6 +15,9 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         login.layer.cornerRadius = 20
+        
+        email.delegate = self
+        password.delegate = self
     }
 
     @IBOutlet weak var login: UIButton!
@@ -29,6 +32,11 @@ class ViewController: UIViewController{
         if email.text == "admin" && password.text == "admin123"{
             performSegue(withIdentifier: "main", sender: nil)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
