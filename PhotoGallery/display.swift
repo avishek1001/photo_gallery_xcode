@@ -19,7 +19,6 @@ class display: UIViewController {
         
         img.image = UIImage(named: cam[myIndex])
 
-        home.layer.cornerRadius = 10
         prevBtn.layer.cornerRadius = 10
         nextBtn.layer.cornerRadius = 10
         

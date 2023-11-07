@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate{
     
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func loginAction(_ sender: Any) {
         
         if email.text == "admin" && password.text == "admin123"{
-            performSegue(withIdentifier: "main", sender: nil)
+            performSegue(withIdentifier: "toMain", sender: nil)
         }
         else {
             let alrt = UIAlertController(title: "Wrong Password", message: "", preferredStyle: UIAlertController.Style.alert)
