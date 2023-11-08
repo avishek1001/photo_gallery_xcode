@@ -116,12 +116,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         view.endEditing(true)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destiny = segue.destination as? selection{
             destiny.n = email.text!
-            destiny.i = wallpaper[profile_image]
+            
         }
         
-    } */
+    }
 }
 
