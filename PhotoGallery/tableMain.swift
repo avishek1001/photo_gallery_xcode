@@ -22,9 +22,14 @@ class tableMain: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        backgroundTM.image = UIImage(named: wallpaper[profile_image])
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBOutlet weak var backgroundTM: UIImageView!
+    //var itm = " "
     
 
 

@@ -23,6 +23,8 @@ class display: UIViewController {
         nextBtn.layer.cornerRadius = 10
         
         img.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        
+        backgroundDisplay.image = UIImage(named: wallpaper[profile_image])
     }
     
     @IBOutlet weak var home: UIButton!
@@ -31,6 +33,8 @@ class display: UIViewController {
     
     @IBOutlet weak var zoomSlider: UISlider!
     
+    
+    @IBOutlet weak var backgroundDisplay: UIImageView!
     
     
     @IBAction func prevAction(_ sender: Any) {

@@ -7,25 +7,30 @@
 
 import UIKit
 import AVKit
-import AVFoundation
 
 class videoDisplay: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        backgroundVidDis.image = UIImage(named: wallpaper[profile_image])
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var backgroundVidDis: UIImageView!
+    
+    @IBAction func Play(_ sender: Any) {
+        let path = Bundle.main.path(forResource: vid[videoIndex], ofType: "mp4")
+        let myurl = URL(fileURLWithPath: path!)
+        
+        let vlc = AVPlayer(url: myurl)
+        
+        let myvlc = AVPlayerViewController()
+        myvlc.player = vlc
+        present(myvlc, animated: true, completion: nil)
+        
     }
-    */
+    
+    
 
 }

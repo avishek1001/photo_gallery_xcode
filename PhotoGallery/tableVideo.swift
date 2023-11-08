@@ -19,9 +19,11 @@ class tableVideo: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        backgroundTV.image = UIImage(named: wallpaper[profile_image])
     }
     
-
+    @IBOutlet weak var backgroundTV: UIImageView!
+    
    
 }
 
