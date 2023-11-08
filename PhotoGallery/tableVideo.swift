@@ -7,7 +7,7 @@
 
 import UIKit
 
-var vid = ["vid01", "vid02", "vid03", "vid04"]
+var vid = ["vid01", "vid02", "vid03", "vid04", "vid05", "vid06"]
 var videoIndex = 0
 
 class tableVideo: UIViewController {
